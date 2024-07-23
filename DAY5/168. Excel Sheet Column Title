@@ -1,0 +1,13 @@
+class Solution {
+    public String convertToTitle(int n) {
+        StringBuilder result = new StringBuilder();
+        while (n > 0) {
+            n--; 
+            int remainder = n % 26;
+            char letter = (char) ('A' + remainder);
+            result.insert(0, letter);
+            n /= 26;
+        }
+        return result.toString();
+    }
+}
